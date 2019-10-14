@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as d3 from "d3";
 import PieClass from "./PieClass";
+import PieHooks from "./PieHooks";
 
 function Display() {
     const generateData = (value, length = 5) =>
@@ -30,7 +31,7 @@ function Display() {
                 outerRadius={100}
                 />
             </div>
-            {/* <div>
+            <div>
                 <span className="label">Hooks</span>
                 <PieHooks
                 data={data}
@@ -40,7 +41,7 @@ function Display() {
                 outerRadius={100}
                 />
             </div>
-            <div>
+            {/* <div>
                 <span className="label">SVG Elements</span>
                 <PieSVG
                 data={data}
