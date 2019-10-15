@@ -1,9 +1,18 @@
+// 3 Types of scales
+// Quantitative - for continuous input domains
+// Ordinal - for discrete input domains
+// Time scales - for time domains
+
 var barData = [20, 30, 105, 15, 15];
 
 var height = 400,
     width  = 600,
     barWidth  = 50,
     barOffset = 5;
+
+var yScale = d3.scaleBand.linear()
+                .domain([0, d3.matcher(barData)])
+                .range([0, height])
 
 d3.select('#chart').append('svg')
     .attr('width', width)
